@@ -23,10 +23,8 @@ public class ParseService {
         final String exposedHtml = request.getExposureType().getExposedHtml(html);
         final Arranger rearrange = arranger.rearrange(exposedHtml);
         final String interleavedText = interleaver.interleave(rearrange);
-
         final OutputUnit outputUnit = new OutputUnit(interleavedText, request.getUnitCount());
 
-
-        return null;
+        return new ParseResponse(outputUnit);
     }
 }
