@@ -1,7 +1,9 @@
 package com.handler.stringhandler.parse.dto;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+@Getter
 @RequiredArgsConstructor
 public class ParseResponse {
     private final String quotient;

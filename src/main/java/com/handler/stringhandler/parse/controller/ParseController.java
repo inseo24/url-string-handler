@@ -3,6 +3,7 @@ package com.handler.stringhandler.parse.controller;
 import com.handler.stringhandler.parse.dto.ParseRequest;
 import com.handler.stringhandler.parse.dto.ParseResponse;
 import com.handler.stringhandler.parse.service.ParseService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,10 +18,7 @@ public class ParseController {
 
     private final ParseService parseService;
 
-    /*
-     request -> url, type, 출력 묶음 단위
-     response -> 몫, 나머지
-     */
+    @Operation(summary = "url data process", description = "URL 파싱 후 HTML 데이터 가공")
     @PostMapping("/ api/parse")
     public ResponseEntity<ParseResponse> parse(@RequestBody @Valid ParseRequest request) {
         final ParseResponse response = parseService.parse(request);
