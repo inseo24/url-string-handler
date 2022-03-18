@@ -24,6 +24,6 @@ public class ParseController {
     @PostMapping("/ api/parse")
     public ResponseEntity<ParseResponse> parse(@RequestBody @Valid ParseRequest request) {
         final ParseResponse response = parseService.parse(request);
-        return null;
+        return ResponseEntity.ok().body(response);
     }
 }
