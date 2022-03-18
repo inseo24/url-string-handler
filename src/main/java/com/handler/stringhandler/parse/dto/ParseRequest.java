@@ -8,5 +8,5 @@ import lombok.RequiredArgsConstructor;
 public class ParseRequest {
     private final String url;
     private final ExposureType exposureType;
-    private final String unitCount;
+    private final Integer unitCount;
 }

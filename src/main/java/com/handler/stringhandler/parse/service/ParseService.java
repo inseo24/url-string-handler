@@ -1,5 +1,6 @@
 package com.handler.stringhandler.parse.service;
 
+import com.handler.stringhandler.parse.dto.OutputUnit;
 import com.handler.stringhandler.parse.dto.ParseRequest;
 import com.handler.stringhandler.parse.dto.ParseResponse;
 import com.handler.stringhandler.parse.util.Arranger;
@@ -22,6 +23,9 @@ public class ParseService {
         final String exposedHtml = request.getExposureType().getExposedHtml(html);
         final Arranger rearrange = arranger.rearrange(exposedHtml);
         final String interleavedText = interleaver.interleave(rearrange);
+
+        final OutputUnit outputUnit = new OutputUnit(interleavedText, request.getUnitCount());
+
 
         return null;
     }
