@@ -1,4 +1,4 @@
-package com.handler.stringhandler.dto;
+package com.handler.stringhandler.parse.dto;
 
 import lombok.RequiredArgsConstructor;
 
