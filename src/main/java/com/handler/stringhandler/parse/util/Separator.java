@@ -17,7 +17,7 @@ public class Separator {
     @Getter
     private String number;
 
-    public Separator separator(final String str){
+    public Separator separate(final String str){
         final Matcher matcher = PATTERN.matcher(str);
 
         StringBuilder sbStr = new StringBuilder();
