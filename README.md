@@ -1,9 +1,12 @@
 # string-handler
 
-## 🔥🔥🔥 Reference
-https://github.com/Jonny-Cho/string-handler.git
-Jonny-Cho 님의 string-handler를 따라 만들었습니다.
+<br/>
 
+## 🔥🔥🔥 Reference
+- https://github.com/Jonny-Cho/string-handler.git
+- Jonny-Cho 님의 string-handler를 따라 만들었습니다.
+
+<br/>
 
 ## 실행방법
 
