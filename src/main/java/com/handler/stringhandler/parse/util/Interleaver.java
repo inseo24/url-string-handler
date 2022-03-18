@@ -10,7 +10,7 @@ public class Interleaver {
 
     public static final String DELIMITER = "";
 
-    public String interleave(final String str1, final String str2) {
+    private String interleave(final String str1, final String str2) {
         final StringBuilder sb = new StringBuilder();
 
         final Iterator<String> iterator1 = Arrays.stream(str1.split(DELIMITER)).iterator();
@@ -26,5 +26,9 @@ public class Interleaver {
         }
 
         return sb.toString();
+    }
+
+    public String interleave(final Arranger arranger) {
+        return interleave(arranger.getSortedEnglish(), arranger.getSortedNumber());
     }
 }
