@@ -29,4 +29,13 @@ class UrlConnectorTest {
 
         assertThat(result.contains(title)).isTrue();
     }
+
+    @DisplayName("잘못된 url 입력시 IllegalArgumentException 발생")
+    @Test
+    void textTest() {
+        final String result = urlConnector.getText("https://www.naver.com");
+        System.out.println(result);
+
+
+    }
 }
