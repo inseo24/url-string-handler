@@ -1,5 +1,6 @@
 package com.handler.stringhandler.parse.util;
 
+import com.handler.stringhandler.parse.error.UrlConnectionException;
 import org.jsoup.Jsoup;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ public class UrlConnector {
         try {
             return Jsoup.connect(url).get().html();
         } catch (IOException e){
-            throw new IllegalArgumentException("접근할 수 없는 url 입니다.");
+            throw new UrlConnectionException("접근할 수 없는 url 입니다.");
         }
     }
 
